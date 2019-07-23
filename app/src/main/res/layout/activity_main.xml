@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="278dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:text="@string/hasil"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/buttonExit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvJudul"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/input"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAngka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/hasil_angka"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvHasil"
+        app:layout_constraintTop_toBottomOf="@+id/tvHasil" />
+
+    <Button
+        android:id="@+id/op_tambah"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginRight="87dp"
+        android:text="@string/operator_tambah"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/op_kurang"
+        app:layout_constraintEnd_toEndOf="@+id/tvHasil"
+        app:layout_constraintStart_toStartOf="@+id/button" />
+
+    <Button
+        android:id="@+id/op_kurang"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:text="@string/operator_kurang"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/op_kali"
+        app:layout_constraintEnd_toEndOf="@+id/op_kali"
+        app:layout_constraintStart_toStartOf="@+id/op_tambah" />
+
+    <Button
+        android:id="@+id/op_kali"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginRight="49dp"
+        android:layout_marginBottom="97dp"
+        android:text="@string/operator_kali"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/tvAngka"
+        app:layout_constraintEnd_toStartOf="@+id/buttonExit"
+        app:layout_constraintStart_toStartOf="@+id/tvHasil"
+        app:layout_constraintTop_toBottomOf="@+id/tvJudul"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/op_bagi"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/operator_bagi"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/op_kali"
+        app:layout_constraintEnd_toEndOf="@+id/edit2"
+        app:layout_constraintStart_toEndOf="@+id/op_kali" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="234dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="@string/input2"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/op_tambah"
+        app:layout_constraintEnd_toStartOf="@+id/op_kali"
+        app:layout_constraintStart_toStartOf="@+id/op_kali"
+        app:layout_constraintTop_toBottomOf="@+id/tvJudul" />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="234dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="@string/input1"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/edit2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJudul" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/buttonBersih"
+        app:layout_constraintBottom_toTopOf="@+id/tvHasil"
+        app:layout_constraintEnd_toStartOf="@+id/op_kali"
+        app:layout_constraintStart_toStartOf="@+id/op_kali"
+        app:layout_constraintTop_toBottomOf="@+id/op_kurang" />
+
+    <Button
+        android:id="@+id/buttonExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:text="KELUAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
